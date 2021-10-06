@@ -12,7 +12,10 @@ namespace ReadWriteInfo.Cli
             var lastName = Console.ReadLine();
             Console.WriteLine("Enter address and press Return");
             var address = Console.ReadLine();
-            Console.WriteLine($"{firstName}_{lastName}, {address}");
+            Console.WriteLine(@$"Your address:
+*****************************
+{firstName}_{lastName}
+{address}");
         }
     }
 }

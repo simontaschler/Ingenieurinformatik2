@@ -1,5 +1,4 @@
 ﻿using System;
-using HelloWorld.Lib;
 
 namespace HelloWorld.Cli
 {
@@ -8,7 +7,7 @@ namespace HelloWorld.Cli
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Printer.PrintHelloWorld();
+            //System.Console.WriteLine("Hello World!");
         }
     }
 }
