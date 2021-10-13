@@ -18,6 +18,7 @@ namespace BonusPoints.Cli
                 var sum = player1 + player2 + player3;
                 Console.WriteLine($"Total of {sum} points");
             }
+            //Abfangen von Fehlern beim Parsen des Userinputss
             catch (FormatException) 
             {
                 Console.WriteLine("Error: Input did not numeric format");

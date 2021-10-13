@@ -12,6 +12,7 @@ namespace AngleCalculator.Cli
                 var ankathete = 5.0;
                 var cos = ankathete / hypotenuse;
                 Console.WriteLine($"Double calculation: Enclosed Angle of {Math.Acos(cos)} rad");
+                //Gibt Winkel von Pi/3 bzw. 30° aus
             }
             #endregion
 
@@ -21,8 +22,11 @@ namespace AngleCalculator.Cli
                 var ankathete = 5;
                 var cos = ankathete / hypotenuse;
                 Console.WriteLine($"Int calculation: Enclosed Angle of {Math.Acos(cos)} rad");
+                //Gibt Winkel von Pi/2 bzw. 45° aus, weil cos = 0 (Verlust von Nachkommastellen durch int)
             }
             #endregion
+
+
         }
     }
 }
