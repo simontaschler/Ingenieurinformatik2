@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A2", "A2", "{2235002B-1A84-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngleCalculator.Cli", "AngleCalculator.Cli\AngleCalculator.Cli.csproj", "{84FCF0D3-84F7-4F6A-9568-CC16EFAF9A37}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A3", "A3", "{FDC3D4A6-48A1-4336-85F9-C34C2E2DD570}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddNumbers.Cli", "OddNumbers.Cli\OddNumbers.Cli.csproj", "{9A4FAEAF-4D05-4135-AC6B-E7D6BAF0A80E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{84FCF0D3-84F7-4F6A-9568-CC16EFAF9A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84FCF0D3-84F7-4F6A-9568-CC16EFAF9A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84FCF0D3-84F7-4F6A-9568-CC16EFAF9A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A4FAEAF-4D05-4135-AC6B-E7D6BAF0A80E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A4FAEAF-4D05-4135-AC6B-E7D6BAF0A80E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A4FAEAF-4D05-4135-AC6B-E7D6BAF0A80E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A4FAEAF-4D05-4135-AC6B-E7D6BAF0A80E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3A20D3E4-F149-4ECF-B77B-C86D7977D59C} = {9824B962-AACA-4F65-930F-ABB2A0277C40}
 		{84FCF0D3-84F7-4F6A-9568-CC16EFAF9A37} = {2235002B-1A84-4A88-A822-D3DF0850DF36}
+		{9A4FAEAF-4D05-4135-AC6B-E7D6BAF0A80E} = {FDC3D4A6-48A1-4336-85F9-C34C2E2DD570}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A64ECA85-2315-4613-A326-E2334C983673}
