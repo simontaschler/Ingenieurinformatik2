@@ -5,6 +5,17 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberTriangle.Cli", "NumberTriangle.Cli\NumberTriangle.Cli.csproj", "{CCDF69EE-5F1C-4E7E-B4F7-9567ECD1B5FA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A4", "A4", "{81E05E35-2B98-487B-AE80-4447452F7554}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A1", "A1", "{6EECD79F-A227-43D4-8C88-556C3B34B17E}"
+	ProjectSection(SolutionItems) = preProject
+		BoolSolutions.txt = BoolSolutions.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A2", "A2", "{D817F736-0FF5-4391-8D9D-B57687A810B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A5", "A5", "{473DB798-E100-4A40-B9A3-425A067320D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +29,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CCDF69EE-5F1C-4E7E-B4F7-9567ECD1B5FA} = {81E05E35-2B98-487B-AE80-4447452F7554}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {415B689F-8F45-4870-A024-0E00A6DC2873}
