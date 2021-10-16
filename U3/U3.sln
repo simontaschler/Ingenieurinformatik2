@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A5", "A5", "{473DB798-E100-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datatypes.Cli", "Datatypes.Cli\Datatypes.Cli.csproj", "{9C9F9402-5616-49BB-814E-C78DFB01D7A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mensa.Cli", "Mensa.Cli\Mensa.Cli.csproj", "{21FB6937-41B7-4672-8BEE-C2ABA950DF32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{9C9F9402-5616-49BB-814E-C78DFB01D7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C9F9402-5616-49BB-814E-C78DFB01D7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C9F9402-5616-49BB-814E-C78DFB01D7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21FB6937-41B7-4672-8BEE-C2ABA950DF32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21FB6937-41B7-4672-8BEE-C2ABA950DF32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21FB6937-41B7-4672-8BEE-C2ABA950DF32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21FB6937-41B7-4672-8BEE-C2ABA950DF32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CCDF69EE-5F1C-4E7E-B4F7-9567ECD1B5FA} = {81E05E35-2B98-487B-AE80-4447452F7554}
 		{9C9F9402-5616-49BB-814E-C78DFB01D7A3} = {D817F736-0FF5-4391-8D9D-B57687A810B9}
+		{21FB6937-41B7-4672-8BEE-C2ABA950DF32} = {473DB798-E100-4A40-B9A3-425A067320D3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {415B689F-8F45-4870-A024-0E00A6DC2873}
