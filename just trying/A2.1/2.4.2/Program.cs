@@ -12,44 +12,25 @@ namespace A2._4
         {
             Console.WriteLine("Bitte geben Sie einen Parameter a als Integer ein um fortzufahren");
             var input = Console.ReadLine();
-            int a = int.Parse(input);
+            double a = int.Parse(input);
 
 
-            if (a == 1)
+            switch (a)
             {
-                a = a + 1;
-                Console.WriteLine("a=" + a);
+                case 1: a++; break;
+                //a++ meint "a um Eines größer"
+                case 2: a = a % 2; break;
+                case 3: a = (int)(a / 2); break;
+                //Nachkommastelle(n) werden ignoriert und verworfen durch ganzzahligen Datentyp
+                case 4: a = Math.Pow(a, 32); break;
+                //4^32 = 2^64, was größer als MaxValue vom standardmäßigen Int32 ist
+                //auch höchste MaxValue eines ganzzahligen Datentyps UInt64 ist nur 2^64 - 1,
+                //deshalb muss double verwendet werden
+                default: Console.WriteLine("Error: Your input is out of bounds"); break;
             }
-            else
-            {
-                if (a == 2)
-                {
-                    a = a % 2;
-                    Console.WriteLine("a=" + a);
-                }
-                else
-                {
-                    if (a == 3)
-                    {
-                        a = a / 2;
-                        Console.WriteLine("a=" + a);
-                    }
-                    else
-                    {
-                        if (a == 4)
-                        {
-                            var converteda = (double)a;
-                            converteda = Math.Pow(a, 32);
-                            Console.WriteLine("a=" + converteda.ToString("N0"));
 
-                        }
-                        else
-                        {
-                            Console.WriteLine("Nicht definiert");
-                        }
-                    }
-                }
-            }
+            if (_a >= 1 && _a <= 4)
+                Console.WriteLine($"a = {a.ToString("N0")}");
 
             // converted a fehlt aber da 4^32 immer gerade ist (modulo = 0) stimmt das Ergebnis der Abfrage b trotzdem)
 
