@@ -15,7 +15,8 @@ namespace Flowchart.Cli
                 switch (a) 
                 {
                     case 1: a++; break;
-                    case 2: a %= 2; break;
+                        //a++ meint a um Eines größer
+                    case 2: a = a%2; break;
                     case 3: a = (int)(a / 2); break;
                         //Nachkommastelle(n) werden ignoriert und verworfen durch ganzzahligen Datentyp
                     case 4: a = Math.Pow(a, 32); break;
