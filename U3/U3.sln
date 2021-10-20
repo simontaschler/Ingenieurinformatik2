@@ -20,6 +20,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datatypes.Cli", "Datatypes.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mensa.Cli", "Mensa.Cli\Mensa.Cli.csproj", "{21FB6937-41B7-4672-8BEE-C2ABA950DF32}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A3", "A3", "{BDF8D396-08AE-4EA7-B0F0-D414188BA962}"
+	ProjectSection(SolutionItems) = preProject
+		CheckPrimeNumber.drawio = CheckPrimeNumber.drawio
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
