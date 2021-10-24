@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix.Cli", "Matrix.Cli\Matrix.Cli.csproj", "{7FDAD28E-A1DB-400A-88C1-E4C95D387942}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A1", "A1", "{A8FD489F-C4AB-4902-A3B6-A190665573DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A2", "A2", "{DE232758-1850-4659-BC9D-978E6670D51D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku.Cli", "Sudoku.Cli\Sudoku.Cli.csproj", "{2292B83B-ABC6-451A-BEFF-296ECE03C7E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +21,17 @@ Global
 		{7FDAD28E-A1DB-400A-88C1-E4C95D387942}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FDAD28E-A1DB-400A-88C1-E4C95D387942}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FDAD28E-A1DB-400A-88C1-E4C95D387942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2292B83B-ABC6-451A-BEFF-296ECE03C7E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2292B83B-ABC6-451A-BEFF-296ECE03C7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2292B83B-ABC6-451A-BEFF-296ECE03C7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2292B83B-ABC6-451A-BEFF-296ECE03C7E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7FDAD28E-A1DB-400A-88C1-E4C95D387942} = {A8FD489F-C4AB-4902-A3B6-A190665573DF}
+		{2292B83B-ABC6-451A-BEFF-296ECE03C7E3} = {DE232758-1850-4659-BC9D-978E6670D51D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B27FF865-09C6-4942-9651-2DFCFCB38D6C}
