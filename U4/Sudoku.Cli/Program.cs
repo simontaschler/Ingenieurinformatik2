@@ -36,7 +36,7 @@ namespace Sudoku.Cli
                         unsolved[row][column] = number;
                         Console.WriteLine("Correct!");
                     }
-                    else 
+                    else
                     {
                         Console.WriteLine("Wrong!");
                         errorCount++;
