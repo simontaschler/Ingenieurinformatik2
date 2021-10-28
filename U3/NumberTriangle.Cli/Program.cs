@@ -19,7 +19,7 @@ namespace NumberTriangle.Cli
                 numCollection.Add(currentNumber);
             }
 
-            Console.WriteLine(string.Join(", ", numCollection.Where(q => q % 5 == 0)));
+            Console.WriteLine(string.Join(", ", numCollection.Where(q => q % 5 == 0))); //where --> ist ein Filter der nur q's (als Collection) mit logischer Verknüpfung= true ausgibt
             Console.ReadLine();
         }
     }

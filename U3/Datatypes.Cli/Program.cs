@@ -11,7 +11,7 @@ namespace Datatypes.Cli
         static void Main(string[] args)
         {
             var charIndex = Console.Read();
-            Console.WriteLine($"{(char)charIndex}: {charIndex}");
+            Console.WriteLine($"{(char)charIndex}: {charIndex}"); //$= interpolated string (Rechnen im string möglich)
 
             double charDub = charIndex;
             charDub *= 1.3;
