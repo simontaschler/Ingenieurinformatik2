@@ -13,7 +13,7 @@ namespace A2._4
             Console.WriteLine("Bitte geben Sie einen Parameter a als Integer ein um fortzufahren");
             var input = Console.ReadLine();
             double a = int.Parse(input);
-
+            var isinRange = a >= 1 && a <= 4;
 
             switch (a)
             {
@@ -29,7 +29,7 @@ namespace A2._4
                 default: Console.WriteLine("Error: Your input is out of bounds"); break;
             }
 
-            if (_a >= 1 && _a <= 4)
+            if (isinRange)
                 Console.WriteLine($"a = {a.ToString("N0")}");
 
             // converted a fehlt aber da 4^32 immer gerade ist (modulo = 0) stimmt das Ergebnis der Abfrage b trotzdem)
