@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A2", "A2", "{612AB0F8-9C4A-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatestCommonFactor.Cli", "GreatestCommonFactor.Cli\GreatestCommonFactor.Cli.csproj", "{6E37A0D5-66ED-4185-9515-73A1F6676750}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A4", "A4", "{FE91AD18-D4AC-4F89-8C39-7E519831AEF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.Cli", "Orders.Cli\Orders.Cli.csproj", "{C886D90D-7C78-4D44-9D22-2580B7925061}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{6E37A0D5-66ED-4185-9515-73A1F6676750}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E37A0D5-66ED-4185-9515-73A1F6676750}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E37A0D5-66ED-4185-9515-73A1F6676750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C886D90D-7C78-4D44-9D22-2580B7925061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C886D90D-7C78-4D44-9D22-2580B7925061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C886D90D-7C78-4D44-9D22-2580B7925061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C886D90D-7C78-4D44-9D22-2580B7925061}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{595ECB31-FE7D-433E-AB3A-86A92E0A58ED} = {1620AE42-8314-445E-AD87-89D39C17616E}
 		{6E37A0D5-66ED-4185-9515-73A1F6676750} = {612AB0F8-9C4A-4521-B93A-AC3790B06FC3}
+		{C886D90D-7C78-4D44-9D22-2580B7925061} = {FE91AD18-D4AC-4F89-8C39-7E519831AEF7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {02664A95-8006-452A-8D69-1D4A5E501655}
