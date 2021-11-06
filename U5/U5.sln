@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Circus.Cli", "Circus.Cli\Circus.Cli.csproj", "{595ECB31-FE7D-433E-AB3A-86A92E0A58ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A1", "A1", "{1620AE42-8314-445E-AD87-89D39C17616E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{595ECB31-FE7D-433E-AB3A-86A92E0A58ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595ECB31-FE7D-433E-AB3A-86A92E0A58ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595ECB31-FE7D-433E-AB3A-86A92E0A58ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595ECB31-FE7D-433E-AB3A-86A92E0A58ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{595ECB31-FE7D-433E-AB3A-86A92E0A58ED} = {1620AE42-8314-445E-AD87-89D39C17616E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02664A95-8006-452A-8D69-1D4A5E501655}
+	EndGlobalSection
+EndGlobal
