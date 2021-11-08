@@ -11,6 +11,7 @@ namespace Sudoku.Cli
     {
         static void Main(string[] args)
         {
+            //Einelsen der Angabe und der lösung mithilfe von JSON strings und einem Parser
             var unsolved = JsonConvert.DeserializeObject<List<List<int>>>(Sample.exampleJson);
             //var unsolved = JsonConvert.DeserializeObject<List<List<int>>>(Sample.testExampleJson);
             var solved = JsonConvert.DeserializeObject<List<List<int>>>(Sample.solutionJson);
@@ -47,7 +48,7 @@ namespace Sudoku.Cli
                     Console.WriteLine("Error: Input did not match required format.");
                 }
 
-                Task.Factory.StartNew(() => Console.ReadKey()).Wait(TimeSpan.FromSeconds(2)); //wartet 2s oder bis Taste edrückt wird
+                Task.Factory.StartNew(() => Console.ReadKey()).Wait(TimeSpan.FromSeconds(2)); //wartet 2s oder bis Taste gedrückt wird
             }
             while (!unsolved.IsSolved(solved)); //Schleife iteriert bis Sudoku und Lösung gleich sind
 
@@ -83,7 +84,7 @@ namespace Sudoku.Cli
             
             if (isFormatValid) 
             {
-                row = int.Parse(input.Substring(0, 1)) - 1;
+                row = int.Parse(input.Substring(0,1)) - 1;
                 column = int.Parse(input.Substring(2,1)) - 1;
                 number = int.Parse(input.Substring(4,1));
             }
