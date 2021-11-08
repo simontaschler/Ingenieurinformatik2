@@ -15,6 +15,8 @@ namespace EVManager
 
         internal void Recharge(double rechargeLevel)
         {
+            //Logik zum Laden der Batterie
+            //sorgt dafür, dass keine Ladung durch negative Werte abgezogen werden kann und dass nicht über 100% geladen werden kann
             if (rechargeLevel < 0)
                 return;
             else if (rechargeLevel + Charge > 100)
@@ -25,6 +27,8 @@ namespace EVManager
 
         internal void Consume(double consumedCharge)
         {
+            //Logik zum Verbrauchen der Batterieladung
+            //sorgt dafür, dass keine Ladung durch negative Werte hinzugefügt werden kann und dass nicht unter 0% entladen werden kann
             if (consumedCharge < 0)
                 return;
             else if (Charge - consumedCharge < 0)

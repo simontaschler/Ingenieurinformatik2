@@ -45,7 +45,8 @@ namespace Drinks.Cli
             };
 
             Console.WriteLine("Lagernr.   Name     Alkoholgehalt  Mit Cola mischbar?");
-            Console.WriteLine(string.Join(Environment.NewLine, drinks));
+            Console.WriteLine(string.Join(Environment.NewLine, drinks));    //string.Join erstellt string aus allen Elemente der Collection mit angegeben Seperator (NewLine)
+                                                                            //string.Join erhält Liste an Objekten, ruft deshalb für jedes Objekt die ToString-Methode aus Basisklasse Object auf
             Console.ReadLine();
         }
     }
