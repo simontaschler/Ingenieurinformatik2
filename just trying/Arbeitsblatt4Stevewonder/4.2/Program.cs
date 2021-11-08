@@ -25,10 +25,12 @@ namespace _4._2
             int[] Zeile6 = new int[6];
             int[] inputLoesung = { 1, 6, 4, 5, 3, 2, 5, 2, 3, 6, 1, 4, 4, 1, 2, 3, 6, 5, 3, 5, 6, 2, 4, 1, 6, 4, 5, 1, 2, 3, 2, 3, 1, 4, 5, 6 };
             int[] spielstandvergleich = new int[35];
-            spielstandvergleich = (Zeile1.Concat(Zeile2).Concat(Zeile3).Concat(Zeile4).Concat(Zeile5).Concat(Zeile6)).ToArray();
+            //spielstandvergleich = (Zeile1.Concat(Zeile2).Concat(Zeile3).Concat(Zeile4).Concat(Zeile5).Concat(Zeile6)).ToArray();
             
             while (!inputLoesung.SequenceEqual(spielstandvergleich)) //Vergleich funktioniert nicht?? deshalb if break....
             {
+                #region Ausgabe
+
                 do
                 {
                     Zeile1[i] = spielvorgabe[0, i];
@@ -88,15 +90,20 @@ namespace _4._2
                 string outputZeile6 = string.Join(" ", Zeile6);
                 Console.WriteLine(outputZeile6);
                 i = 0;
+                #endregion
+
                 
-                spielstandvergleich = (Zeile1.Concat(Zeile2).Concat(Zeile3).Concat(Zeile4).Concat(Zeile5).Concat(Zeile6)).ToArray();
-                if (inputLoesung.SequenceEqual(spielstandvergleich))
-                    break;
+                
+                //if als bugfix.. while Schleife stopt nicht.?
+                //if (inputLoesung.SequenceEqual(spielstandvergleich))
+                    //break;
 
 
                 string inRow;
                 string inCollumn;
                 string inNumber;
+                //user Abfrage 
+
                 Console.WriteLine("Geben Sie Ihren nächsten Spielzug ein. Zeile:");
                 inRow = Console.ReadLine();
                 Console.WriteLine("Reihe");
@@ -104,19 +111,27 @@ namespace _4._2
                 Console.WriteLine("Loesungszahl");
                 inNumber=Console.ReadLine();
 
-                int loesungscheck = loesung[(int.Parse(inRow))-1, (int.Parse(inCollumn))-1];
-                if (int.Parse(inNumber) == loesungscheck)
+                if (int.TryParse(inRow, out var row) && int.TryParse(inCollumn, out var collumn) && int.TryParse(inNumber, out var number))
                 {
-                    spielvorgabe[int.Parse(inRow)-1, int.Parse(inCollumn)-1] = int.Parse(inNumber);
-                    Console.Clear();
-                    Console.WriteLine("TipTop Spielzug!");
+                    int loesungscheck = loesung[row - 1, collumn - 1];
+                    if (number == loesungscheck)
+                    {
+                        spielvorgabe[row - 1, collumn - 1] = number;
+                        Console.Clear();
+                        Console.WriteLine("TipTop Spielzug!");
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Leider falsch...");
+                    }
                 }
                 else
                 {
                     Console.Clear();
-                    Console.WriteLine("Leider falsch...");
+                    Console.WriteLine("ungültige Eingabe");
                 }
-                
+                spielstandvergleich = (Zeile1.Concat(Zeile2).Concat(Zeile3).Concat(Zeile4).Concat(Zeile5).Concat(Zeile6)).ToArray();  
                 
             }
 
