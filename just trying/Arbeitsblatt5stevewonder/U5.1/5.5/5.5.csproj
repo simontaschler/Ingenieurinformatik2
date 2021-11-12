@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{877C8630-436B-43CB-BBF2-97DD7DBAA04B}</ProjectGuid>
+    <ProjectGuid>{BC476CE7-B693-4F1F-89CB-4762CF3A5157}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_5._4</RootNamespace>
-    <AssemblyName>5.4</AssemblyName>
+    <RootNamespace>_5._5</RootNamespace>
+    <AssemblyName>5.5</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bestellung.cs" />
+    <Compile Include="Haus.cs" />
+    <Compile Include="Immobilie.cs" />
+    <Compile Include="Mieter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wohung.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -31,66 +31,27 @@ Programmende:               [4] *
                 {
                     case 1:
                         {
-                            Console.Clear();
-                            Console.WriteLine("Bestätigen Sie jede Eingabe mit der Enter Taste!\nGeben Sie den Vornamen ein!");
-                            string VNinput = Console.ReadLine();
-                            Console.Clear();
-                            Console.WriteLine("Geben Sie den Nachnamen ein!");
-                            string NMinput = Console.ReadLine();
-                            Console.Clear();
-                            Console.WriteLine("Geben Sie die Straße inkl. Hausnummer/Stock/Tür ein!");
-                            string Straßeinput = Console.ReadLine();
-                            Console.Clear();
-                            Console.WriteLine("Geben Sie die Postleitzahl ein");
-                            string PLZinput = Console.ReadLine();
-                            Console.Clear();
-                            Console.WriteLine("Geben Sie den Ort ein!");
-                            string Ortinput = Console.ReadLine();
-                            Console.WriteLine("Bestätigen Sie mit Enter!");
-                            Adrb.AdressdatenListe.Add(new Adressdaten(VNinput, NMinput, Straßeinput, PLZinput, Ortinput));
-
-                            Console.Clear();
+                            Adrb.AdressDatenEinlesen();
                             break;
                         }
                     case 2:
                         {
-                            foreach (var Daten in Adrb.AdressdatenListe)
-                            {
-                                
-                                Console.WriteLine(Daten);
-                            }
+                            Adrb.Ausgabe();
                             break;
                         }
                     case 3:
                         {
-                            Console.Write("Geben Sie den Nachnamen der gesuchten Person ein!\n");
-                            string searchfor = Console.ReadLine();
-                            foreach (Adressdaten i in Adrb.AdressdatenListe)
-                                if (searchfor == i.Nachname)
-                                {
-                                    Console.WriteLine(i.Vorname + ": " + i.Straße + "//" + i.Postleitzahl + " " + i.Ort);
-                                }
+                            Adrb.Suche();
                             break;
                         }
                     case 4:
                         {
-
                            return;
                         }
-
                 }
                 Console.ReadLine();
-
-            }
-
-        
-         }   
-        
-
-
-                     
-
-               
+            }        
+         }              
     }
 }
 
