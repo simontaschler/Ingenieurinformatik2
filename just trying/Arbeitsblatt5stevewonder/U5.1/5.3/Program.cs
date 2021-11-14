@@ -33,7 +33,7 @@ Programmende:               [4] *
                     case 1:
                         {
                             Adrb.AdressDatenEinlesen(); //Bei Eingabe 1 wird die MEthode zum Einlesen neuer Adressdaten aufgerufen
-                            break;  //break beendet die switch, und die endlos- SChleife bgeinnt von vorne
+                            break;  //break beendet die switch, und die endlos- Schleife bgeinnt von vorne
                         }
                     case 2:
                         {
@@ -48,7 +48,12 @@ Programmende:               [4] *
                     case 4:
                         {
                             return;     //Beendet die Main Methode
-                        }                            
+                        }
+                    default:            //Wenn weder 1,2,3 oder 4 eingegeben wird, gibt die Konsule "Ungülltige Eingabe!" aus
+                        {
+                            Console.WriteLine("Ungülltige Eingabe!");   
+                            break;
+                        }
                 }
             }        
          }              

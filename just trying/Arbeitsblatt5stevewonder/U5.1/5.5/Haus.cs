@@ -10,8 +10,5 @@ namespace _5._5
     {
         List<string> MieterHaus;
         public static int nextIndex = 1;
-
-       
-    
-
+    }
 }
