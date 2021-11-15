@@ -19,7 +19,7 @@ namespace Sorting.Cli
         internal float Price { get; set; }
 
         //CompareTo(T other):
-        //CompareTo-Methode des IComparable<T> Interfaces, erwartet Parameter des Typs ToList
+        //CompareTo-Methode des IComparable<T> Interfaces, erwartet Parameter des Typs T
         //gibt int > 0 zurück, wenn aktuelle Instanz als größer als Parameter zu betrachten ist
         //gibt int < 0 zurück, wenn aktuelle Instanz als kleiner als Parameter zu betrachten ist
         //gibt 0 zurück, wenn aktuelle Instanz als gleich dem Parameter zu betrachten ist

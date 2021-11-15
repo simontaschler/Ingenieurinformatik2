@@ -37,11 +37,11 @@ namespace Sorting.Cli
             Console.WriteLine();
             Console.WriteLine(string.Join(Environment.NewLine, phones));
 
-            //Alternativ: Linq (Language integrated Queries)
+            //Alternativ: Linq (Language integrated queries)
             //OrderBy(q => ...): Linq-Methode zum Sortieren von Collections, Lambda-Expression als Parameter
             //                   q repräsentiert Element in Collection, sortiert Collection basierend auf dem von q abhängigen Ausdruck nach =>
             //					 gibt Collection von Typ IOrderedEnumerable zurück
-            //ThenBy(q => ...): Linq-Methode um IOrderedEnumerables mit weiteren Sortierungskriterien zu versehen, Lambda-Expression als Parameter
+            //ThenBy(q => ...): Linq-Methode um IOrderedEnumerables mit weiteren Sortierkriterien zu versehen, Lambda-Expression als Parameter
             //                  q repräsentiert Element in Collection, fügt neues Sortierkriterium basierend auf dem von q abhängigen Ausdruck nach =>
             //					gibt Collection von Typ IOrderedEnumerable zurück
             //ToList(): IEnumerable<T> wird in List<T> umgewandelt
