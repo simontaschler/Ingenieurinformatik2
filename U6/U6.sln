@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A5", "A5", "{E74B09EE-2F52-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Freighter.Cli", "Freighter.Cli\Freighter.Cli.csproj", "{F997711D-ABE6-403A-B93A-77AF09803C45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Cli", "Library.Cli\Library.Cli.csproj", "{D39DA22C-8BB8-42C2-AA47-CA3A22EA785A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{F997711D-ABE6-403A-B93A-77AF09803C45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F997711D-ABE6-403A-B93A-77AF09803C45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F997711D-ABE6-403A-B93A-77AF09803C45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D39DA22C-8BB8-42C2-AA47-CA3A22EA785A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D39DA22C-8BB8-42C2-AA47-CA3A22EA785A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D39DA22C-8BB8-42C2-AA47-CA3A22EA785A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D39DA22C-8BB8-42C2-AA47-CA3A22EA785A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +58,7 @@ Global
 		{369B8FE5-A1D7-4E90-85B8-4B45237393A3} = {C5F39B88-B29A-40F7-956B-34475607933B}
 		{95163B21-982C-4385-9124-8A5A350CF75B} = {EBCD5B58-33D6-4BAD-BD1C-428388A0B83A}
 		{F997711D-ABE6-403A-B93A-77AF09803C45} = {96BD5FCA-DB86-4B15-802A-0A10103948F5}
+		{D39DA22C-8BB8-42C2-AA47-CA3A22EA785A} = {E74B09EE-2F52-4096-8E7D-D2F352D332B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {26E3B35F-E623-445D-95FA-15D022FCD5DB}

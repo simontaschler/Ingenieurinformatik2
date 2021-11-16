@@ -2,9 +2,9 @@
 
 namespace Freighter.Cli
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        internal static void Main(string[] args)
         {
             var freighter = new Freighter("Columbus", "Helga", "Hong Kong", "Hamburg", 300);
             freighter.AddContainer(new Container("Teddybären", 40));
