@@ -6,27 +6,24 @@ using System.Threading.Tasks;
 
 namespace U5._1
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             //Zirkusobjekt erstellen durch Aufrufen des Konstruktors
-          var zirkus1 = new Zirkus("HalliGalli", 5, new Tiertrainer("Klaus Müller"));
+            var zirkus = new Zirkus("HalliGalli", 5, new TierTrainer("Klaus Müller"));
 
             //Tier Objekte mittels Konstruktor erstellen und direkt in das zirkus Objekt hinzufügen
-         zirkus1.Tierhinzufügen(new Tier("Klaus", "Pferd"));
-         zirkus1.Tierhinzufügen(new Tier("Herbert", "Maus"));
-         zirkus1.Tierhinzufügen(new Tier("Herbert", "Eintagsfliege"));
-         zirkus1.Tierhinzufügen(new Tier("Samy", "Hund"));
-         zirkus1.Tierhinzufügen(new Tier("Günther", "Regenbogenforelle"));
-         zirkus1.Tierhinzufügen(new Tier("Fritzl", "Goldfisch"));
-
+            zirkus.AddTier(new Tier("Klaus", "Pferd"));
+            zirkus.AddTier(new Tier("Herbert", "Maus"));
+            zirkus.AddTier(new Tier("Herbert", "Eintagsfliege"));
+            zirkus.AddTier(new Tier("Samy", "Hund"));
+            zirkus.AddTier(new Tier("Günther", "Regenbogenforelle"));
+            zirkus.AddTier(new Tier("Fritzl", "Goldfisch"));
 
             //Aufrufen der Ausgabe Methode aus der zirkus Klasse
-            zirkus1.Ausgabe();
+            zirkus.Ausgabe();
             Console.ReadLine();
-
-
         }
     }
 }

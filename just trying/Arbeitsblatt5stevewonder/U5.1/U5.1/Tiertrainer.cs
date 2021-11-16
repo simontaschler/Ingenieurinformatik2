@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace U5._1
 {
-    class Tiertrainer
+    public class TierTrainer
     {
-        public string nameTrainer { get; set; }     //Öffentliche Methode die TierTrainer Objekten die Eigenschaft nameTrainer zuweist
+        //MSBuild erstellt bei Auto-Properties automatisch im Hintergrund Getter-Methode
+        //z.B. public string get_Name()
+        //wenn diese Methode nicht überschrieben wird, wird auch privates Feld angelegt, das den Wert speichert, Zugriff erfolgt aber immer über Property
+        //wenn nur get-Operator angegeben wird, handelt es sich um readonly-Property, d.h. es können nur im Konstruktor Werte zugewiesen werden
+        public string Name { get; }
 
-        public Tiertrainer(string nameTrainer)      //Konstruktur für Tiertrainer Objekte 
-        {
-            this.nameTrainer = nameTrainer;         //Der Inputwert des Konstruktors wird im Objekt unter der Eigenschaft nameTrainer gespeichert
-        }
+        public TierTrainer(string name) =>   //Konstruktur für Tiertrainer Objekte 
+            Name = name;         //Der Inputwert des Konstruktors wird im Objekt unter der Eigenschaft Name gespeichert
     }
-
 }
