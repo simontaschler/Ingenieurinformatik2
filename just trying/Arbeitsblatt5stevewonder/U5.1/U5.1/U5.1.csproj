@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tiere.cs" />
-    <Compile Include="Tiertrainer.cs" />
+    <Compile Include="TierTrainer.cs" />
     <Compile Include="Zirkus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

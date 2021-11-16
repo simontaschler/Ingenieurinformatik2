@@ -6,44 +6,38 @@ using System.Threading.Tasks;
 
 namespace _5._4
 {
-    class Bestellung
+    public class Bestellung
     {
-        public string Name;
-        public double Preis;
-        private static int Bestellnummer = 1;
+        private readonly string Name;
+        private readonly double Preis;
+        private readonly int Bestellnummer;
+        private static int nextBestellnummer = 1;
 
-        
-
-        public Bestellung(string Name, double Preis)
+        public Bestellung(string name, double preis)
         {
-            this.Name = Name;
-            this.Preis = Preis;
-            string AusgabeNr =(Bestellnummer.ToString().PadLeft(3,'0'));
-            Console.WriteLine($"{AusgabeNr}\t{Name}\t\t{Preis}");
-            Bestellnummer++;
-        }
-        public Bestellung(double Preis)
-        {
-            this.Name = "???";
-            this.Preis = Preis;
-            string AusgabeNr = (Bestellnummer.ToString().PadLeft(3, '0'));
-            Console.WriteLine($"{AusgabeNr}\t{Name}\t\t{Preis}");
-            Bestellnummer++;
-        }
-        public Bestellung(string Name)
-        {
-            this.Name = Name;
-            this.Preis = 0;
-            string AusgabeNr = (Bestellnummer.ToString().PadLeft(3, '0'));
-            Console.WriteLine($"{AusgabeNr}\t{Name}\t\t{Preis}");
-            Bestellnummer++;
+            Name = name;
+            Preis = preis;
+            Bestellnummer = nextBestellnummer;
+            nextBestellnummer++;
         }
 
-        
-        
-            
-        
+        public Bestellung(double preis)
+        {
+            Name = "???";
+            Preis = preis;
+            Bestellnummer = nextBestellnummer;
+            nextBestellnummer++;
+        }
 
-    
+        public Bestellung(string name)
+        {
+            Name = name;
+            Preis = 0;
+            Bestellnummer = nextBestellnummer;
+            nextBestellnummer++;
+        }
+
+        public override string ToString() => 
+            $"{Bestellnummer.ToString().PadLeft(3, '0')}\t{Name}\t\t{Preis}";
     }
 }

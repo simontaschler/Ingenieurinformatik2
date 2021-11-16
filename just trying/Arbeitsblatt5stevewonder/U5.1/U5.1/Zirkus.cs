@@ -6,57 +6,57 @@ using System.Threading.Tasks;
 
 namespace U5._1
 {
-    class Zirkus
+    public class Zirkus
     {
+        //MSBuild erstellt bei Auto-Properties automatisch im Hintergrund Getter-Methode
+        //z.B. public string get_Name()
+        //wenn diese Methode nicht überschrieben wird, wird auch privates Feld angelegt, das den Wert speichert, Zugriff erfolgt aber immer über Property
+        //wenn nur get-Operator angegeben wird, handelt es sich um readonly-Property, d.h. es können nur im Konstruktor Werte zugewiesen werden
+        public string Name { get; }
+        public TierTrainer Trainer { get; }
 
-//Atribute des Zirkus festlegen
-        public string circusName { get; set; }
-        public Tiertrainer tierTrainer { get; set; }
-        private int nextIndex = 0;      //nextIndex beschreibt die jeweils nächste freie Position im tierarray
+        private Tier[] tiere;           //Feld für Array in dem alle Tier-Objekte gespeichert werden
+        private int nextIndex = 0;      //Feld für den nächsten freien Index im Array tiere
 
-//Erstellen eines Arrays in dem alle Tier- Objekte gespeicher werden
-        Tier[] tierarray;
-
- //Konstruktor zum Erstellen von Zirkus Objekten
-        public Zirkus (string circusName, int größe, Tiertrainer tierTrainer )
+        //Konstruktor zum Erstellen von Zirkus Objekten
+        public Zirkus (string circusName, int größe, TierTrainer tierTrainer )
         {
-            this.circusName = circusName;
-            this.tierTrainer = tierTrainer;
-            tierarray = new Tier[größe];
+            Name = circusName;
+            Trainer = tierTrainer;
+            tiere = new Tier[größe]; //Feld wird mit neuem Array initialisiert
         }
 
-
-//Überprüfe ob der Zirkus bereits voll ist
-        public void Tierhinzufügen(Tier animal)
+        //Überprüfe ob der Zirkus bereits voll ist
+        public void AddTier(Tier animal)
         {
-            if(nextIndex>=tierarray.Length) //Wenn die nächste freie Position (nextIndex) außerhalb der Array Größe liegt, ist der Zirkus voll!
+            if (animal == null)     //Wenn leeres Objekt übergeben wird soll gar nicht versucht werden es dem Array hinzuzufügen
+                return;
+
+            if(nextIndex >= tiere.Length) //Wenn die nächste freie Position (nextIndex) außerhalb der Array Größe liegt, ist der Zirkus voll!
             {
-                Console.WriteLine("Circus " + circusName + " ist bereits voll!");   //Ausgabe dass der Zirkus voll ist
+                //Ausgabe dass der Zirkus voll ist
+                //$-Prefix vor string (interpolated string) um in {} Expressions verwenden zu können, außerdem Performancevorteil ggü. Konkatenieren mit +
+                Console.WriteLine($"Circus {Name} ist bereits voll!");
             }
             else
             {
-                tierarray[nextIndex] = animal;      //Wenn die nächste freie Position noch im Array liegt, sowird das Tier Objekt im Array an der freien Position gespeichert
-                nextIndex++;                        //Anschließend springt der nextIndex eins weiter, da die aktuelle Position ja nun belegt ist
-
+                tiere[nextIndex] = animal;      //Wenn die nächste freie Position noch im Array liegt, sowird das Tier Objekt im Array an der freien Position gespeichert
+                nextIndex++;                    //Anschließend springt der nextIndex eins weiter, da die aktuelle Position ja nun belegt ist
             }        
         }
 
-
-//Ausgabe in der Konsole
+        //Ausgabe in der Konsole
         public void Ausgabe()
-//Zirkusname, sowie Trainername werden einfach über console.writeline(...); ausgegeben
-        {    
-            Console.WriteLine("***********************************" + circusName + "***********************************");
-            Console.WriteLine("Zirkustrainer:\n                 " + tierTrainer.nameTrainer + "\nTiere:");
+        {
+            //Zirkusname, sowie Trainername werden einfach über Console.writeline(...); ausgegeben
+            //$-Prefix vor string (interpolated string) um in {} Expressions verwenden zu können, außerdem Performancevorteil ggü. Konkatenieren mit +
+            Console.WriteLine($"***********************************{Name}***********************************");
+            Console.WriteLine($"Zirkustrainer:\n                 {Trainer.Name}\nTiere:");
 
- //Um die Tiere auszugeben ist eine foreach- Schleife notwendig, welche alle Elemente n im Tierarray einzeln ausgibt.
- //Dafür wird die Methode Tierasugabe aus der Klasse Tiere für jedes Element n einzeln aufgerufen
-            foreach (var n in tierarray)
-            {
-                n.Tierausgabe();        //Zugriff auf die Methode Tierausgabe (n beschreibt daher immer ein Tierobjekt)
-            }
-
-
+            //Um die Tiere auszugeben ist eine foreach- Schleife notwendig, welche alle Elemente n im Tierarray einzeln ausgibt.
+            //Dafür wird die Methode TierAusgabe aus der Klasse Tiere für jedes Element n einzeln aufgerufen
+            foreach (var tier in tiere)
+                tier.Ausgabe();        //Zugriff auf die Methode Tierausgabe (n beschreibt daher immer ein Tierobjekt)
         }
     }
 }

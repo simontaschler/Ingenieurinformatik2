@@ -10,12 +10,12 @@ namespace _5._4
     {
         static void Main(string[] args)
         {
-            Bestellung Nr1 = new Bestellung("AsiaWok", 8.90);
-            Bestellung Nr2 = new Bestellung("Ali");
-            Bestellung Nr3 = new Bestellung("Roberto", 9.80);
-            Bestellung Nr4 = new Bestellung("Test1", 8.9);
-            Bestellung Nr5 = new Bestellung(8.9);
-            Bestellung Nr6 = new Bestellung(8.9);
+            var Nr1 = new Bestellung("AsiaWok", 8.90);
+            var Nr2 = new Bestellung("Ali");
+            var Nr3 = new Bestellung("Roberto", 9.80);
+            var Nr4 = new Bestellung("Test1", 8.9);
+            var Nr5 = new Bestellung(8.9);
+            var Nr6 = new Bestellung(8.9);
 
             Console.Read();
 

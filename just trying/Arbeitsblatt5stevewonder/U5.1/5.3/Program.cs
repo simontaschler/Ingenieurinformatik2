@@ -10,15 +10,15 @@ namespace _5._3
     {
         static void Main(string[] args)
         {
-            Adressdaten Pers1= new Adressdaten("Stefan", "Huber", "Kaiserweg 5/8/81", "8010", "Graz");  //Um von Beginn an eine Lisze zu haben, wird zuerst eine erste Person manuell angelegt
+            var Pers1= new Adressdaten("Stefan", "Huber", "Kaiserweg 5/8/81", "8010", "Graz");  //Um von Beginn an eine Lisze zu haben, wird zuerst eine erste Person manuell angelegt
 
-            Adressbuch Adrb = new Adressbuch ();    //Anschließend wird ein Objekt Adrb der Klasse Adressbuch angelegt
+            var Adrb = new Adressbuch ();    //Anschließend wird ein Objekt Adrb der Klasse Adressbuch angelegt
             Adrb.AdressdatenListe.Add(Pers1);       //In das Listen Attribut des Objektes Adrb wird nun das Objekt Pers1 der Klasse Adressdaten hinzugefügt
 
             while (true)        //Um das Programm solange weiterlaufen zu lassen, bis es durch Eingabemöglichkeit 4 beendet wird, wird zuerst eine Endlosschleife erstellt
             {
                 Console.Clear();    //Die Konsole wird von verunreinigungen aus vorherigen Schleifendruchläufen bereinigt
-                    //Und gibt anschließend das Menü aus, Durch die Eingabe eines @ vor dem string, wird die Formatierung direkt aus der Programierobverfläche übernommen
+                //@-Prefix vor string (verbatim string) für Multiline-Strings (anderes Escape-Pattern), Formatierung mit Linebreaks u.ä. wird aus Code übernommen 
                 Console.WriteLine(@"Menü     
 *********************************
 Adresse eingeben:           [1] *

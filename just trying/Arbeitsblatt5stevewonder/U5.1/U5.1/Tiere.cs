@@ -6,26 +6,25 @@ using System.Threading.Tasks;
 
 namespace U5._1
 {
-    class Tier
+    public class Tier
     {
-        public string rasseTier { get; set; }
-        public string nameTier { get; set; }
-
+        //MSBuild erstellt bei Auto-Properties automatisch im Hintergrund Getter-Methode
+        //z.B. public string get_Name()
+        //wenn diese Methode nicht überschrieben wird, wird auch privates Feld angelegt, das den Wert speichert, Zugriff erfolgt aber immer über Property
+        //wenn nur get-Operator angegeben wird, handelt es sich um readonly-Property, d.h. es können nur im Konstruktor Werte zugewiesen werden
+        public string Name { get; }
+        public string Rasse { get; }
 
         //Konstruktor zum erstellen eines Tier Objektes
-        public Tier(string nameTier, string rasseTier)
+        public Tier(string name, string rasse)
         {
-            this.nameTier = nameTier;
-            this.rasseTier = rasseTier;
-
+            Name = name;
+            Rasse = rasse;
         }
 
         //Methode zur Ausgabe der Tiernamen und Rassen
-        public void Tierausgabe()
-        {
-            Console.WriteLine("                 " + nameTier + " " + rasseTier);
-        }
-
-    
+        public void Ausgabe() =>
+            //$-Prefix vor string (interpolated string) um in {} Expressions verwenden zu können, außerdem Performancevorteil ggü. Konkatenieren mit +
+            Console.WriteLine($"                 {Name} {Rasse}");
     }
 }

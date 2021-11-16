@@ -18,13 +18,13 @@ namespace U5._2
              
              //If Abfrage um die größere der beiden Input Zahlen festzulegen   
             if(a>=b)
-             {
-                größereZahl = a;        //Wenn a größer ist als b, so ist a die größere Zahl, wenn beide Zahlen gleich groß sind ist es egal welche Zahl weiter gegeben wird
-             }
-             else
-             {
-                größereZahl = b;        //Sonnst wird b als größereZahl weitergegeben
-             }
+            {
+                größereZahl = a;    //Wenn a größer ist als b, so ist a die größere Zahl, wenn beide Zahlen gleich groß sind ist es egal welche Zahl weiter gegeben wird
+            }
+            else
+            {
+                größereZahl = b;    //Sonnst wird b als größereZahl weitergegeben
+            }
 
             //Die while Schleife läuft mit allen int. Zahlen von 0 bis zur größeren der beiden Inputparametern durch
             while (i <= größereZahl)
@@ -51,7 +51,7 @@ namespace U5._2
                 return a;                           //Falls b = 0 ist, ist a der gemeinsame größte Teiler
             else
             {
-                return Rechenweg2(b, a % b);        //Die Methode wird nocheinmal von vorne aufgerufen, jedoch verändern sich die Input Parameter
+                return Rechenweg2(b, a % b);        //Die Methode wird nocheinmal von vorne aufgerufen, jedoch verändern sich die Parameter
             }
            
         }   
