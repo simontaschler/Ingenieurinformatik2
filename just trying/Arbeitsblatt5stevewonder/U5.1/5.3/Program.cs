@@ -10,7 +10,7 @@ namespace _5._3
     {
         static void Main(string[] args)
         {
-            var Pers1= new Adressdaten("Stefan", "Huber", "Kaiserweg 5/8/81", "8010", "Graz");  //Um von Beginn an eine Lisze zu haben, wird zuerst eine erste Person manuell angelegt
+            var Pers1= new Adressdaten("Stefan", "Huber", "Kaiserweg 5/8/81", "8010", "Graz");  //Um von Beginn an eine Liste zu haben, wird zuerst eine erste Person manuell angelegt
 
             var Adrb = new Adressbuch ();    //Anschließend wird ein Objekt Adrb der Klasse Adressbuch angelegt
             Adrb.AdressdatenListe.Add(Pers1);       //In das Listen Attribut des Objektes Adrb wird nun das Objekt Pers1 der Klasse Adressdaten hinzugefügt
@@ -26,8 +26,8 @@ Alle Adressen ausgeben:     [2] *
 Nach Personen suchen:       [3] *
 Programmende:               [4] *
 *********************************");
-
-                int input = int.Parse(Console.ReadLine());  //Die Auswahl des Benutzers, welche Methode (1,2,3 oder 4) er ausführen möchte wird unter input gespeichert
+                string menueinput = Console.ReadLine();
+                int input = int.Parse(menueinput);  //Die Auswahl des Benutzers, welche Methode (1,2,3 oder 4) er ausführen möchte wird unter input gespeichert
                 switch (input)  //Über die Switch, wird nun abgeglichen, welche Eingabe der Benutzer getätigt hat
                 {
                     case 1:

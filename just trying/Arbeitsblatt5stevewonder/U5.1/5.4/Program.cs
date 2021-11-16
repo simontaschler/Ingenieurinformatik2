@@ -10,13 +10,19 @@ namespace _5._4
     {
         static void Main(string[] args)
         {
-            var Nr1 = new Bestellung("AsiaWok", 8.90);
-            var Nr2 = new Bestellung("Ali");
-            var Nr3 = new Bestellung("Roberto", 9.80);
-            var Nr4 = new Bestellung("Test1", 8.9);
-            var Nr5 = new Bestellung(8.9);
-            var Nr6 = new Bestellung(8.9);
-
+            List<Bestellung> Bestellungsliste = new List<Bestellung>();
+            Bestellungsliste.Add(new Bestellung("AsiaWok", 8.90));
+            Bestellungsliste.Add(new Bestellung("Ali"));
+            Bestellungsliste.Add(new Bestellung("Roberto", 9.80));
+            Bestellungsliste.Add(new Bestellung("Test1", 8.9));
+            Bestellungsliste.Add(new Bestellung(8.9));
+            Bestellungsliste.Add(new Bestellung(8.9));
+                        
+                        
+            foreach(Bestellung x in Bestellungsliste)
+            {
+                Console.WriteLine(x);
+            }
             Console.Read();
 
 

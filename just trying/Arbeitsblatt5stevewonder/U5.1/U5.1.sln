@@ -20,6 +20,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.4", "5.4\5.4.csproj", "{877C8630-436B-43CB-BBF2-97DD7DBAA04B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.5", "5.5", "{107EB775-F3DC-4F2A-9322-7318D4D7820A}"
+	ProjectSection(SolutionItems) = preProject
+		5.4\Program.cs = 5.4\Program.cs
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.5", "5.5\5.5.csproj", "{BC476CE7-B693-4F1F-89CB-4762CF3A5157}"
 EndProject
