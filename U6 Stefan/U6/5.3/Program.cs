@@ -56,7 +56,7 @@ Programmende:...............................[6] *
                     case 5:
                         {
                             Adrb.AdressdatenListe.Sort(new VNuNMSortierung());  //Aufruf der IComparer Methode durch anlegen eines neuen IComparer Objektes
-                            Adrb.Ausgabe();         //Methodeaufruf zur Ausgabe
+                            Adrb.Ausgabe();                                     //Methodeaufruf zur Ausgabe
                             break;
                         }
                     case 6:

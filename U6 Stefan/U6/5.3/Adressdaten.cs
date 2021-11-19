@@ -19,9 +19,9 @@ namespace _5._3
             //$-Prefix vor string (interpolated string) um in {} Expressions verwenden zu können, außerdem Performancevorteil ggü. Konkatenieren mit +
             $"{Vorname} {Nachname}/{Strasse}//{Postleitzahl} {Ort}";
 
-        public int CompareTo(Adressdaten other)
+        public int CompareTo(Adressdaten other)     //Festlegen einer gewünschten Vergleichsmethode über das Interface von IComparable
         {
-            return Vorname.CompareTo(other.Vorname);
+            return Vorname.CompareTo(other.Vorname);        //In diesem FAll werden die Vorname Attribute des Objektes verglichen
         }
 
         //Konstruktor zum einlesen der Daten für das Objekt
