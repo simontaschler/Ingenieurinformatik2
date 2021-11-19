@@ -11,6 +11,7 @@ namespace U6
         static void Main(string[] args)
         {Console.OutputEncoding = System.Text.Encoding.UTF8;
             #region Zahlen_Sortierung
+            Console.WriteLine("Zahlenmengen sortieren:");
             List<int> Zahlenmenge = new List<int>();
 
             Zahlenmenge.Add(1);
@@ -40,8 +41,9 @@ namespace U6
 
             Console.WriteLine("\n*******************************\n");
             #endregion            
+
             #region Handybeispiel
-            Console.WriteLine("Handy Beispiel!\n");
+            Console.WriteLine("Handy Beispiel:\n");
 
             List<Handy> Handyliste = new List<Handy> { new Handy("iPhone 8", 479.99),
                 new Handy("Galaxy S9", 620.88),
@@ -65,6 +67,7 @@ namespace U6
             }
 
             #endregion
+           
             Console.Read();
 
         }
