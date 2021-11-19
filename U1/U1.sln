@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A3", "A3", "{3018C4B1-CE53-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadWriteInfo.Cli", "ReadWriteInfo.Cli\ReadWriteInfo.Cli.csproj", "{617F6D47-89AD-450A-A54E-D529D13DB3D3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A1", "A1", "{8EBD4A9E-0084-4B6D-9D3D-EA7537A7CB7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U1", "U1\U1.csproj", "{6DEEC9B7-E879-49E5-9CFC-001443983D8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{617F6D47-89AD-450A-A54E-D529D13DB3D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{617F6D47-89AD-450A-A54E-D529D13DB3D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{617F6D47-89AD-450A-A54E-D529D13DB3D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DEEC9B7-E879-49E5-9CFC-001443983D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DEEC9B7-E879-49E5-9CFC-001443983D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DEEC9B7-E879-49E5-9CFC-001443983D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DEEC9B7-E879-49E5-9CFC-001443983D8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A6CD700F-B6B7-4472-B294-57EEE6FBC4C8} = {5CE34144-4FB7-4DA7-96E6-FD985E79E970}
 		{617F6D47-89AD-450A-A54E-D529D13DB3D3} = {3018C4B1-CE53-441A-81C5-FC0881546D86}
+		{6DEEC9B7-E879-49E5-9CFC-001443983D8C} = {8EBD4A9E-0084-4B6D-9D3D-EA7537A7CB7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56024E9E-93FD-4A5E-91AF-7848952660C3}
