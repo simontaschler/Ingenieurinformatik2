@@ -26,7 +26,7 @@ namespace _6._4
                     this.R = 2077;
                     break;
                 default:
-                    Console.WriteLine("ERROR 42069: Unbekanntes Medium! Gaskonstante von Luft angenommen (287,05).");
+                    Console.WriteLine("ERROR 42069: Unbekanntes Medium! Gaskonstante von Luft angenommen (287,05[J/(kg*K)]).");
                     this.R = 287.05;
                     break;
             }
