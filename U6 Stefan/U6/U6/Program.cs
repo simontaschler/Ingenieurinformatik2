@@ -11,16 +11,17 @@ namespace U6
         static void Main(string[] args)
         {Console.OutputEncoding = System.Text.Encoding.UTF8;        //Festlegen des UTF8 Standards in der Konsole (um das € Symbol später ausgeben zu können
             #region Zahlen_Sortierung
-            Console.WriteLine("Zahlenmengen sortieren:");   
-            List<int> Zahlenmenge = new List<int>();                //Erstrellen einer Liste mit ungeordneten Zahlen
-
-            Zahlenmenge.Add(1);
-            Zahlenmenge.Add(435);
-            Zahlenmenge.Add(3452);
-            Zahlenmenge.Add(5);
-            Zahlenmenge.Add(90);
-            Zahlenmenge.Add(69);
-            Zahlenmenge.Add(33);
+            Console.WriteLine("Zahlenmengen sortieren:");
+            List<int> Zahlenmenge = new List<int>
+            {
+                1,
+                435,
+                3452,
+                5,
+                90,
+                69,
+                33
+            };                //Erstrellen einer Liste mit ungeordneten Zahlen
 
 
             Zahlenmenge.Sort();     //Die sort MEthode von Listen sortiert in aufsteigender Reihenfolge
