@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace U6
 {
-    class Handy : IComparable<Handy>            //Festlegen einer neuen Klasse Handy inkl. Einbidung des Interfaces COmparable
+    class Handy : IComparable<Handy>            //Festlegen einer neuen Klasse Handy inkl. Einbidung des Interfaces Comparable
     {
         public string Name { get; set; }        //Attribute: Name als string sowie Price als double
         public double Price { get; set;}
@@ -17,14 +17,14 @@ namespace U6
             this.Price = price;
         }
 
-        public override string ToString()           //Um das Modell später in einem gewünschten Format auszugeben, wird die standardmäßige tostring MEthode überschrieben
+        public override string ToString()           //Um das Modell später in einem gewünschten Format auszugeben, wird die standardmäßige ToString Methode überschrieben
         {
             return Name + "\t" + Price + "€";       
         }
 
-        public int CompareTo(Handy other)           //Das IComparable vergleicht den Wert eines Attributes mit einem Anderen
+        public int CompareTo(Handy other)           //Das IComparable vergleicht den Wert eines Attributes mit einem anderen
         {
-            return Price.CompareTo(other.Price); //in diesem FAll der Preis
+            return Price.CompareTo(other.Price); //in diesem Fall der Preis
         }
     
     

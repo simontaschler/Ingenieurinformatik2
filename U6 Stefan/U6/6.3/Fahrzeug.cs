@@ -12,7 +12,7 @@ namespace _6._3
         public int leistung { get; set; }
         public int reichweite { get; set; }
 
-        public abstract double calcVerbrauch();     //Festlegen einer abstrakten MEthode (muss überschrieben werden)
+        public abstract double calcVerbrauch();     //Festlegen einer abstrakten Methode (muss überschrieben werden)
 
     }
 }

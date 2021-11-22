@@ -11,8 +11,7 @@ namespace _6._4
         static void Main(string[] args)
         {
             Container C1 = new Container("Shampoo", 100);
-            Container C2 = new Container("Fruechte", 400);
-            Container C3 = new Container("Kondome", 1000);
+            Container C2 = new KuehlContainer("Fruechte", 400, "Kühlfracht");
             Container C4 = new Container("koks", 980);
 
             Console.WriteLine(C1 + "\n" + C2);
