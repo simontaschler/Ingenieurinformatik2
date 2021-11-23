@@ -19,6 +19,8 @@ namespace BMI.Cli
             //                          Zugriff deswegen nur auf sortierte Sequenz möglich
             //                          TKey als Datentyp des Keys, nach dem sortiert wird
             //                          TValue als Datentyp des zu speichernden Wertes (i.d.F. Range<decimal> für Intervall des BMIs)
+            //decimal statt double, weil DivideByZeroException nicht für floating point Types wie double designed wurde und deswegen keine Exception geworfen wird,
+            //bei Division durch 0 mit decimal hingegen schon
             var maleNormWeight = new SortedList<int, Range<decimal>> 
             {
                 { 16, new Range<decimal>(19, 24) },
