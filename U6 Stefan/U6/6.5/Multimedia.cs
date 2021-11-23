@@ -17,5 +17,6 @@ namespace _6._5
 
         public override double getPreis() => preis * 1.1;
         public override string ToString() => base.ToString() + " //e- Medium";
+        
     }
 }

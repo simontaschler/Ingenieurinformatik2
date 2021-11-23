@@ -12,7 +12,7 @@ namespace _6._3
         static void Main(string[] args)
         {           //Speichrn der eingelesenen Daten aus der CSV Datei in ein string Array mit dem Namen Zeilen
                     //Jede Zeile der Datei ist nun eín Ellement im Array
-            string[] Zeilen = File.ReadAllLines(@"C:\Users\Steve\Documents\uni\3. Semester\Ing. Inf. II\Angabe\UE6\Fuhrparkdaten.csv");
+           string[] Zeilen = File.ReadAllLines(@"C:\Users\Steve\Documents\uni\3. Semester\Ing. Inf. II\Angabe\UE6\Fuhrparkdaten.csv");
             List<Fahrzeug> Fahrzeugliste = new List<Fahrzeug>();        //Anlegen einer Liste für den objekttyp Fahrzeug in dem später alle Fahrzeuge gespeichert werden sollen
 
             foreach (string Zeile in Zeilen)            //Für jedes Element im Array werden nun die Eigenschaften (welche in der CSV DAtei durch ";" getrennt sind) einzeln in ein neues Array gespeichert 

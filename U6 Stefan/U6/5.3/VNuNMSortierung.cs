@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _5._3
 {
-    class VNuNMSortierung : IComparer<Adressdaten>          //Durch das Anlegen einer neuen Klasse welche von der ICompare KLasse erbt, kann das Interface bearbeitet werden
+    public class VNuNMSortierung : IComparer<Adressdaten>          //Durch das Anlegen einer neuen Klasse welche von der ICompare KLasse erbt, kann das Interface bearbeitet werden
     {
         public int Compare(Adressdaten x, Adressdaten y)        //Hier wird immer ein Attribut der Klasse Adressdaten mit einem Anderen verglichen
         {
