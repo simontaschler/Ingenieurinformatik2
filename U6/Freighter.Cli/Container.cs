@@ -19,6 +19,7 @@ namespace Freighter.Cli
         //wenn diese Methoden nicht überschrieben werden, wird auch privates Feld angelegt, das den Wert speichert, Zugriff erfolgt aber immer über Property
         internal double Weight { get; private set; }
         //Property mit Expression-Body: im Hintergrund Methode internal double get_Temperature() die wert des angegebenen Ausdrucks zurückgibt, Syntax bei Aufruf wie Feldzugriff
+        //virtual: Property kann überschrieben werden
         internal virtual double Temperature => 20;
 
         internal Container(string content, double weight)

@@ -81,7 +81,7 @@ namespace Freighter.Cli
             //@-Prefix vor string (verbatim string) für Multiline-Strings (anderes Escape-Pattern)
             //$-Prefix vor string (interpolated string) um in {} Expressions verwenden zu können, außerdem Performancevorteil ggü. Konkatenieren mit +
             //string.Join: fügt Collection zu einem string zusammen
-            //             lemente werden mit angegebenem Separator (1. Parameter) unterteilt
+            //             Elemente werden mit angegebenem Separator (1. Parameter) unterteilt
             //             ruft für jedes einzelnen Element der Collection ToString() auf
             $@"-----------------------------Frachtschiff {Name}-----------------------------
 Kapitän: {Captain}
@@ -90,6 +90,7 @@ Leergewicht: {Weight} t
 Gesamtgewicht: {CalculateWeight()} t
 fährt von {Start} nach {Destination}
 -----------------------------Ladung-----------------------------
-{string.Join(Environment.NewLine, Containers as object[])}";
+{string.Join(Environment.NewLine, Containers as object[])}";    //as object[] weil string.Join Overloads für object[] und IEnumerable<object> hat
+                                                                //as object[] dient dazu, dem Compiler mitzuteilen, welcher Overload verwendet werden soll
     }
 }

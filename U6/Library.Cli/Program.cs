@@ -32,6 +32,19 @@ namespace Library.Cli
             allMedia.Sort();                        //alle Medien sortieren
             Console.WriteLine("Sortierte Liste:");
             Console.WriteLine(string.Join(Environment.NewLine, allMedia));
+
+            //Alternativ: Linq (Language integrated queries)
+            //OrderBy(q => ...): Linq-Methode zum Sortieren von Collections, Lambda-Expression als Parameter
+            //                   q repräsentiert Element in Collection, sortiert Collection basierend auf dem von q abhängigen Ausdruck nach =>
+            //					 gibt Collection von Typ IOrderedEnumerable zurück
+            //ToList(): IEnumerable<T> wird in List<T> umgewandelt
+            //
+            //funktioniert ohne IComparable, IComparer o.ä., man erhält sortierte Collection als eigenes Objekt => alte Collection mit alter Reihenfolge bleibt erhalten
+            //verwendet anderen Sortieralgorithmus als List<T>.Sort() bzw. Array.Sort()
+            //verwendet stable Quicksort ggü. unstable Introsort von Array.Sort() (stable => "gleiche" Elemente behalten gleiche Reihenfolge)
+            //gleiche Average-Performance, aber schlechtere Worst-Case-Performance ggü. Array.Sort()
+
+            //var sortedList = allMedia.OrderBy(q => q.Author).ToList();
         }
     }
 }

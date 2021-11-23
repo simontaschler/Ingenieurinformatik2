@@ -47,6 +47,7 @@ namespace Vehicles.Cli
         //Methode um auf CSV-File als EmbeddedResource anstatt über FileSystem zuzugreifen
         //Durch Einbindung als EmbeddedResource ist CSV-File nicht mehr von Dateipfad abhängig sondern in Projekt integriert
         //gibt CSV als Menge von Zeilen zurück
+        //ersetzt File.ReadAllLines
         internal static IEnumerable<string> GetEmbeddedResourceLines(string resourceName) 
         {
             var assembly = Assembly.GetExecutingAssembly();                         //laufende Assembly über Reflection holen

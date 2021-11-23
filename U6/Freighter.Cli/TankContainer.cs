@@ -23,7 +23,7 @@ namespace Freighter.Cli
         {
             GasMass = gasMass;
             Pressure = pressure;
-            R = content == "Helium" ? 2077 : 287;   //Conditional Expression (kurzschreibweise für ifs): <logische Bedingung> ? <Wert wenn true> : <Wert wenn false>
+            R = content == "Helium" ? 2077 : 287.05;   //Conditional Expression (kurzschreibweise für ifs): <logische Bedingung> ? <Wert wenn true> : <Wert wenn false>
             Volume = volume;
         }
 
