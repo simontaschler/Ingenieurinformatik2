@@ -46,7 +46,7 @@ namespace Calculator.Cli
             return input[0]; 
         }
 
-        //Methode um sicher int-Input zu erhalten
+        //Methode um sicher double-Input zu erhalten
         private static double ReadDoubleFromConsole(string message)
         {
             double retValue;
