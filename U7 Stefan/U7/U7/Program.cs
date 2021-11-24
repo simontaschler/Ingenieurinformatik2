@@ -22,10 +22,11 @@ Program beenden         [3]");
             {
                 input = int.Parse(Console.ReadLine());
             }
-            catch (SystemException)
+            catch (FormatException)
             {
                 Console.Clear();
-                Console.WriteLine("Ungültige Eingabe");
+                Console.WriteLine("Ungültige Eingabe, Press any key to return to start!");
+                Console.ReadLine();
                 goto Start;
             }
             switch(input)
@@ -41,7 +42,7 @@ Program beenden         [3]");
                             Console.WriteLine($"{i} * 7 = ?");
                             antwort = int.Parse(Console.ReadLine());                           
                         }
-                        catch(SystemException)
+                        catch(FormatException)
                         {
                             Console.WriteLine("Ungültige Eingabe");
                             goto FalscheAntwort;
@@ -73,7 +74,7 @@ Press any key to continue!");
                     return;
                 default:
                     Console.Clear();
-                    Console.WriteLine($"Ungültige Eingabe: {input}! nur Zahlen zwischen 1 und 2 zulässig!");
+                    Console.WriteLine($"Ungültige Eingabe: {input}! nur Zahlen zwischen 1 und 3 zulässig!");
                     goto Start;                  
             }      
         }

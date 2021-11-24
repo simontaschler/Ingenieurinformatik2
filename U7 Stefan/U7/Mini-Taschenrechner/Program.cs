@@ -51,7 +51,7 @@ namespace Mini_Taschenrechner
                     break;
                 case "/":                   
                      try
-                    {
+                    {                   
                         ergebnis = input1 / input2;
                     }
                     catch (DivideByZeroException)
