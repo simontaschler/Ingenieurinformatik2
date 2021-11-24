@@ -10,18 +10,18 @@ namespace Mini_Taschenrechner
     {
         static void Main(string[] args)
         {
-            double input1;
-            double input2;
+            decimal input1;
+            decimal input2;
             string inputOperator;
-            double ergebnis;
+            decimal ergebnis;
             
-            
+        Start:  
             Console.WriteLine("**********Taschenrechner**********");
         Eingabe1:
             try 
             {                
                 Console.WriteLine("Geben Sie die erste Zahl ein");
-                input1 = double.Parse(Console.ReadLine());
+                input1 = decimal.Parse(Console.ReadLine());
             }
             catch(SystemException)
             {
@@ -33,7 +33,7 @@ namespace Mini_Taschenrechner
             try
             {
                 Console.WriteLine("Geben Sie die zweit Zahl ein");
-                input2 = double.Parse(Console.ReadLine());
+                input2 = decimal.Parse(Console.ReadLine());
             }
             catch(SystemException)
             {
@@ -50,16 +50,19 @@ namespace Mini_Taschenrechner
                     ergebnis = input1 * input2;
                     break;
                 case "/":
-                    if (input2 == 0)
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Division durch 0!");
-                        goto Eingabe1;
-                    }  
-                    else
+                    
+                       
+                    try
                     {
                         ergebnis = input1 / input2;
                     }
+                    catch (DivideByZeroException)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Division durch 0!");
+                        goto Start;
+                    }                        
+                    
                     break;
                 case "+":
                     ergebnis = input1 + input2;
