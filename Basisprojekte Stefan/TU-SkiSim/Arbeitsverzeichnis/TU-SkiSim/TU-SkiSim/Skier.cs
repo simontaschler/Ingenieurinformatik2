@@ -24,12 +24,12 @@ namespace TU_SkiSim
             throw new System.NotImplementedException();
         }
 
-        public int calculateNeededTime(Track akt_Strecke)
+        public virtual int calculateNeededTime(Track akt_Strecke)
         {
             throw new System.NotImplementedException();
         }
 
-        public Track calculateNextTrack(string alle_Strecken)
+        public abstract Track calculateNextTrack(string alle_Strecken)
         {
             throw new System.NotImplementedException();
         }
@@ -54,7 +54,7 @@ namespace TU_SkiSim
             throw new System.NotImplementedException();
         }
 
-        public double getProbabilityHut()
+        public abstract double getProbabilityHut()
         {
             throw new System.NotImplementedException();
         }

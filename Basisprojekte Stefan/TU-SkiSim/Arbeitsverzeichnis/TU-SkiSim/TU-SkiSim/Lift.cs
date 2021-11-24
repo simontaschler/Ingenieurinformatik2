@@ -23,7 +23,7 @@ namespace TU_SkiSim
             throw new System.NotImplementedException();
         }
 
-        public int calcFlowRate()
+        public abstract int calcFlowRate()
         {
             throw new System.NotImplementedException();
         }

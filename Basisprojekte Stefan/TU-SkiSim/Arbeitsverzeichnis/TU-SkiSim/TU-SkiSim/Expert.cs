@@ -12,18 +12,20 @@ namespace TU_SkiSim
         {
         }
 
-        public int calculateNeededTime(Track akt_Strecke)
+        public override int calculateNeededTime(Track akt_Strecke)
         {
             throw new System.NotImplementedException();
         }
-        public Track calculateNextTrack(List<Track> alle_Strecken)
+       
+
+        public override Track calculateNextTrack(string alle_Strecken)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
-        public double getProbabilityHut()
+        public override double getProbabilityHut()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

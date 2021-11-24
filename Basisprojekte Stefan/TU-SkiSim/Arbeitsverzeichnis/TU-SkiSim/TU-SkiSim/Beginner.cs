@@ -13,14 +13,16 @@ namespace TU_SkiSim
         {
         }
 
-        public Track calculateNextTrack(List<Track> alle_Strecken)
+       
+
+        public override Track calculateNextTrack(string alle_Strecken)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
-        public double getProbabilityHut()
+        public override double getProbabilityHut()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

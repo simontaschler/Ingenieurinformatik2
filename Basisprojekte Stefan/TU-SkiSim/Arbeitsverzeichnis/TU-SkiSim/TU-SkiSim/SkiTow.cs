@@ -13,7 +13,7 @@ namespace TU_SkiSim
         {
         }
 
-        public int calcFlowRate()
+        public override int calcFlowRate()
         {
             throw new System.NotImplementedException();
         }

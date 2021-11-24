@@ -50,6 +50,7 @@
     <Compile Include="Hut.cs" />
     <Compile Include="Interface1.cs" />
     <Compile Include="Lift.cs" />
+    <Compile Include="Penis.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Simulation.cs" />
