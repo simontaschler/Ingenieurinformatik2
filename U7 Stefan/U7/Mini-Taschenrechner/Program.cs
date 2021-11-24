@@ -23,7 +23,7 @@ namespace Mini_Taschenrechner
                 Console.WriteLine("Geben Sie die erste Zahl ein");
                 input1 = decimal.Parse(Console.ReadLine());
             }
-            catch(SystemException)
+            catch(FormatException)
             {
                 Console.WriteLine("Ungültige Eingabe! Nur Zahlen erlaubt");
                 goto Eingabe1;
@@ -35,7 +35,7 @@ namespace Mini_Taschenrechner
                 Console.WriteLine("Geben Sie die zweit Zahl ein");
                 input2 = decimal.Parse(Console.ReadLine());
             }
-            catch(SystemException)
+            catch(FormatException)
             {
                 Console.WriteLine("Ungültige Eingabe! Nur Zahlen erlaubt");
                 goto Eingabe2;
@@ -49,10 +49,8 @@ namespace Mini_Taschenrechner
                 case "*":
                     ergebnis = input1 * input2;
                     break;
-                case "/":
-                    
-                       
-                    try
+                case "/":                   
+                     try
                     {
                         ergebnis = input1 / input2;
                     }
