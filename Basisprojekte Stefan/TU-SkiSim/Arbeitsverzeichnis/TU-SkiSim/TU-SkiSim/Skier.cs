@@ -11,12 +11,12 @@ namespace TU_SkiSim
         private int leavingTime;
         private int number;
         protected int skillLevel;
-        private int status;
+        private status status ;
         private int timeToNextStep;
         private List<Lift> usedLifts;
         private List<Track> usedTracks;
         protected int velocity;
-        protected int visitedHuts;
+        protected List<Hut> visitedHuts;
         private int waitingNumber;
 
         protected Skier(int number, int arrivingTime)
@@ -26,104 +26,115 @@ namespace TU_SkiSim
 
         public virtual int calculateNeededTime(Track akt_Strecke)
         {
-            throw new System.NotImplementedException();
+            return akt_Strecke.getLength() / velocity;
         }
 
-        public abstract Track calculateNextTrack(string alle_Strecken)
+        public abstract Track calculateNextTrack(List<Track> alle_Strecken);
 
 
 
         public void countDownTime()
         {
-            throw new System.NotImplementedException();
+            timeToNextStep--;
+            if (timeToNextStep<0)
+            {
+                timeToNextStep = 0;
+            }
         }
 
         public int getArrivingTime()
         {
-            throw new System.NotImplementedException();
+            return arrivingTime;
         }
 
         public int getLeavingTime()
         {
-            throw new System.NotImplementedException();
+            return leavingTime;
         }
 
         public int getNumber()
         {
-            throw new System.NotImplementedException();
+            return number;
         }
 
         public abstract double getProbabilityHut();
         
 
-        public int getStatus()
+        public status getStatus()
         {
-            throw new System.NotImplementedException();
+            return status;
         }
 
         public int getTimeToNextStep()
         {
-            throw new System.NotImplementedException();
+           return timeToNextStep;
         }
 
         public List<Lift> getUsedLifts()
         {
-            throw new System.NotImplementedException();
+            return usedLifts;
         }
 
         public List<Track> getUsedTracks()
         {
-            throw new System.NotImplementedException();
+            return usedTracks;
         }
 
         public List<Hut> getVisitedHuts()
         {
-            throw new System.NotImplementedException();
+            return visitedHuts;
         }
 
         public int getWaitingNumber()
         {
-            throw new System.NotImplementedException();
+           return waitingNumber;
         }
 
         public void setLeavingTime(int set_leaving_time)
         {
-            throw new System.NotImplementedException();
+            leavingTime = set_leaving_time;
         }
 
-        public void setStatus(string set_status)
+        public void setStatus(int set_status)
         {
-            throw new System.NotImplementedException();
+            status=(status)set_status;
         }
 
-        public void setTimeToNextStep(string set_time)
+        public void setTimeToNextStep(int set_time)
         {
-            throw new System.NotImplementedException();
+            timeToNextStep= set_time;
         }
 
         public void setUsedLift(Lift lift)
         {
-            throw new System.NotImplementedException();
+            usedLifts.Add(lift);
         }
 
-        public void setUsedTrack(string strecke)
+        public void setUsedTrack(Track strecke)
         {
-            throw new System.NotImplementedException();
+            usedTracks.Add(strecke);
         }
 
-        public void setVisitedHut(string huette)
+        public void setVisitedHut(Hut huette)
         {
-            throw new System.NotImplementedException();
+            visitedHuts.Add(huette);
         }
 
-        public void setWaitingNumber(string set_waitingnumber)
+        public void setWaitingNumber(int set_waitingnumber)
         {
-            throw new System.NotImplementedException();
+           waitingNumber=set_waitingnumber;
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            throw new System.NotImplementedException();
+            return $"Nummer: {number}, SkillLevel: {skillLevel}, Time of arrival: {arrivingTime}, Leaving time: {leavingTime}";
         }
     }
+    public enum status:int
+    {
+        vorLift = -1,
+        inLift = 0,
+        inTrack = 1,
+        leftResort = 2
+    } 
 }

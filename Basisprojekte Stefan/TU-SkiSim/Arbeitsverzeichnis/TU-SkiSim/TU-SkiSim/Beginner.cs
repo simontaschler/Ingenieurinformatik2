@@ -7,7 +7,7 @@ namespace TU_SkiSim
 {
     public class Beginner : Skier
     {
-        private double propHutBasic;
+        private double propHutBasic = 1;
 
         public Beginner(int number, int arrivingTime) : base(number, arrivingTime)
         {
@@ -15,14 +15,28 @@ namespace TU_SkiSim
 
        
 
-        public override Track calculateNextTrack(string alle_Strecken)
+        public override Track calculateNextTrack(List<Track> alle_Strecken)
         {
-            throw new NotImplementedException();
+            Track[] potStrecken = alle_Strecken.Where(q => q.getLevel() <= skillLevel).ToArray();
+            Random rnd = new Random();
+            
+            foreach (Track n in potStrecken)
+            {
+                if (rnd.Next(0,1)==1)
+                {
+                    return n;
+                }
+            }
+                
+            return potStrecken.FirstOrDefault(q => q.getNumber() == 1);
         }
 
         public override double getProbabilityHut()
         {
-            throw new NotImplementedException();
+            if (visitedHuts.Count() < 3)
+                return propHutBasic * (3 - visitedHuts.Count());
+            else
+                return propHutBasic * 0.5;
         }
     }
 }
