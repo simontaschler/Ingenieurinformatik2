@@ -11,11 +11,12 @@ namespace TU_SkiSim
 
         public SkiTow(int number, int velocity, int length, double ausfallswsl, int elements, int anzahl_spuren) : base(number, velocity, length, elements)
         {
+            this.numberOfLanes = anzahl_spuren;
         }
 
         public override int calcFlowRate()
         {
-            throw new System.NotImplementedException();
+            return numberOfLanes * velocity * (elements / length);
         }
     }
 }

@@ -30,9 +30,8 @@ namespace TU_SkiSim
         }
 
         public abstract Track calculateNextTrack(string alle_Strecken)
-        {
-            throw new System.NotImplementedException();
-        }
+
+
 
         public void countDownTime()
         {
@@ -54,10 +53,8 @@ namespace TU_SkiSim
             throw new System.NotImplementedException();
         }
 
-        public abstract double getProbabilityHut()
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract double getProbabilityHut();
+        
 
         public int getStatus()
         {

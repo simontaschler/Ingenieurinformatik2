@@ -14,27 +14,29 @@ namespace TU_SkiSim
 
         public Hut(string name, int max_besucher, int average_stay)
         {
-            throw new System.NotImplementedException();
+            this.name = name;
+            this.maxGuests = max_besucher;
+            this.averageStay = average_stay;
         }
 
         public void addGuests(int anzahl)
         {
-            throw new System.NotImplementedException();
+            guests++;
         }
 
         public int getAverageStay()
         {
-            throw new System.NotImplementedException();
+            return averageStay;
         }
 
         public int getGuests()
         {
-            throw new System.NotImplementedException();
+            return guests;
         }
 
         public int getMaxGuests()
         {
-            throw new System.NotImplementedException();
+            return maxGuests;
         }
     }
 }

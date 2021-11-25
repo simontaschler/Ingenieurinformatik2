@@ -11,59 +11,68 @@ namespace TU_SkiSim
         private Hut hut;
         private int length;
         private int level;
-        private int lift;
+        private Lift lift;
         private int number;
         private int peopleOnTheTrack;
-        private int workload;
+        private double workload;
 
-        public Track(int nummer, int länge, int level, Hut huette, int kapazität, string lift_der_Strecke)
+        public Track(int nummer, int länge, int level, Hut huette, int kapazität, Lift lift_der_Strecke)
         {
-            throw new System.NotImplementedException();
+            this.number = nummer;
+            this.length = länge;
+            this.level = level;
+            this.hut = huette;
+            this.capacity = kapazität;
+            this.lift = lift_der_Strecke;
         }
 
-        public Track(int nummer, int länge, int level, int kapazität, string lift_der_Strecke)
+        public Track(int nummer, int länge, int level, int kapazität, Lift lift_der_Strecke)
         {
-            throw new System.NotImplementedException();
+            this.number = nummer;
+            this.length = länge;
+            this.level = level;            
+            this.capacity = kapazität;
+            this.lift = lift_der_Strecke;
         }
 
         public double calcWorkload()
         {
-            throw new System.NotImplementedException();
+            return (double)peopleOnTheTrack / (double)capacity;
         }
 
-        public void changePeopleOnTheTrack(string Anzahl)
+        public void changePeopleOnTheTrack(int Anzahl)
         {
-            throw new System.NotImplementedException();
+            peopleOnTheTrack = Anzahl;
         }
 
         public Hut getHut()
         {
-            throw new System.NotImplementedException();
+            return hut;
         }
 
         public int getLength()
         {
-            throw new System.NotImplementedException();
+            return length;
         }
 
         public int getLevel()
         {
-            throw new System.NotImplementedException();
+            return level;
         }
 
         public Lift getLift()
         {
-            throw new System.NotImplementedException();
+            return lift;
         }
 
         public int getNumber()
         {
-            throw new System.NotImplementedException();
+            return number;
         }
 
         public int getPeopleOnTheTrack()
         {
-            throw new System.NotImplementedException();
+            return peopleOnTheTrack;
         }
     }
 }

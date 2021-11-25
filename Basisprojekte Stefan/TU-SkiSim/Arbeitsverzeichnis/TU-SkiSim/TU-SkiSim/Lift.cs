@@ -15,37 +15,43 @@ namespace TU_SkiSim
 
         protected Lift(int number, int velocity, int length, int elements)
         {
-            throw new System.NotImplementedException();
+            this.number = number;
+            this.velocity = velocity;
+            this.length = length;
+            this.elements = elements;
         }
 
         public void addQueue()
         {
-            throw new System.NotImplementedException();
+            waitingQueue++;
         }
 
-        public abstract int calcFlowRate()
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract int calcFlowRate();
+        
 
         public int getNumber()
         {
-            throw new System.NotImplementedException();
+            return number;
         }
 
         public int getTravelTime()
         {
-            throw new System.NotImplementedException();
+            return length / velocity;
         }
 
         public int getWaitingQueue()
         {
-            throw new System.NotImplementedException();
+            return waitingQueue;
         }
 
         public void redWaitingQueue()
         {
-            throw new System.NotImplementedException();
+            int a= waitingQueue-calcFlowRate();
+            if (a<0)
+            {
+                a = 0;
+            }
+            waitingQueue = a;
         }
     }
 }

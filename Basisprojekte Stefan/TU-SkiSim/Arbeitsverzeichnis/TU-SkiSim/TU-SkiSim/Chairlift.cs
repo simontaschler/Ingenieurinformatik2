@@ -11,11 +11,12 @@ namespace TU_SkiSim
 
         public Chairlift(int number, int velocity, int length,double ausfallswsl, int elements, int anzahl_sitze) : base(number, velocity, length, elements)
         {
+            this.seats = anzahl_sitze;
         }
 
         public override int calcFlowRate()
         {
-            throw new System.NotImplementedException();
+            return seats * velocity * (elements / length);
         }
     }
 }
