@@ -11,7 +11,7 @@ namespace TU_SkiSim
         private int leavingTime;
         private int number;
         protected int skillLevel;
-        private status status ;
+        private Status status ;
         private int timeToNextStep;
         private List<Lift> usedLifts;
         private List<Track> usedTracks;
@@ -60,7 +60,7 @@ namespace TU_SkiSim
         public abstract double getProbabilityHut();
         
 
-        public status getStatus()
+        public Status getStatus()
         {
             return status;
         }
@@ -95,9 +95,9 @@ namespace TU_SkiSim
             leavingTime = set_leaving_time;
         }
 
-        public void setStatus(int set_status)
+        public void setStatus(Status set_status)
         {
-            status=(status)set_status;
+            status=set_status;
         }
 
         public void setTimeToNextStep(int set_time)
@@ -130,7 +130,7 @@ namespace TU_SkiSim
             return $"Nummer: {number}, SkillLevel: {skillLevel}, Time of arrival: {arrivingTime}, Leaving time: {leavingTime}";
         }
     }
-    public enum status:int
+    public enum Status:int
     {
         vorLift = -1,
         inLift = 0,

@@ -9,9 +9,8 @@ namespace TU_SkiSim
     {
         private double propHutBasic = 1;
 
-        public Beginner(int number, int arrivingTime) : base(number, arrivingTime)
-        {
-        }
+        public Beginner(int number, int arrivingTime) : base(number, arrivingTime) { }       
+        
 
        
 
