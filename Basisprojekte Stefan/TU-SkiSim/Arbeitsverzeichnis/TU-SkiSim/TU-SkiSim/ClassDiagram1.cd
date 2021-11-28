@@ -10,7 +10,7 @@
   <Class Name="TU_SkiSim.Hut">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAEAAAAAAAAAIAABAAAAAAAgEACAAAAAACAAAAAA=</HashCode>
+      <HashCode>AAABAEAAAAAAAAAIAABAAAAAAAgEACAAAAAECAAAAAA=</HashCode>
       <FileName>Hut.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -52,29 +52,22 @@
   <Class Name="TU_SkiSim.Chairlift">
     <Position X="1.25" Y="4.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAIAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Chairlift.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TU_SkiSim.SkiTow">
     <Position X="1.25" Y="6.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAACAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>SkiTow.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TU_SkiSim.Simulation">
     <Position X="13" Y="0.75" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>AAQQAABIAAAAAAAAAAAAAAAAAQAAAAAAAAQCEAAAAAA=</HashCode>
+      <HashCode>AAQQAABIAAEAAAQCAAAAAACAAQAAAAAAAAQCEAAAAAA=</HashCode>
       <FileName>Simulation.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TU_SkiSim.Penis">
-    <Position X="13" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Penis.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

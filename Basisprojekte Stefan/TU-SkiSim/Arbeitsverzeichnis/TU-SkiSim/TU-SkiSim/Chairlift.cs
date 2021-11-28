@@ -16,7 +16,11 @@ namespace TU_SkiSim
 
         public override int calcFlowRate()
         {
-            return seats * velocity * (elements / length);
+            return (int)(this.seats * this.velocity * ((double)this.elements / this.length));
+        }
+        public override string ToString()
+        {
+            return $"Lift {number}";
         }
     }
 }

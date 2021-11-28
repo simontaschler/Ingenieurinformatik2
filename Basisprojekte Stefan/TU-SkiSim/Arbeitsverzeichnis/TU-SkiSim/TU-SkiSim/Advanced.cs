@@ -10,6 +10,8 @@ namespace TU_SkiSim
         private double propHutBasic=0.8;
         public Advanced(int number, int arrivingTime) : base(number, arrivingTime)
         {
+            this.skillLevel = 2;
+            this.velocity = 150;
         }
        
 
@@ -17,20 +19,20 @@ namespace TU_SkiSim
         {
             Track[] potStrecken = alle_Strecken.Where(q => q.getLevel() <= skillLevel).ToArray();
             Random rnd = new Random();
-            foreach (Track n in potStrecken) 
-            {
-                switch(n.getLevel())
-                {
-                    case 1:
-                        if (rnd.Next(1, 10) <= 7) 
-                            return n;                            
-                        break;
-                    case 2:
-                        if (rnd.Next(1, 10) <= 3)
-                            return n;
-                        break;                                         
-                }              
-            }
+            //foreach (Track n in potStrecken) 
+            //{
+            //    switch(n.getLevel())
+            //    {
+            //        case 1:
+            //            if (rnd.Next(1, 10) <= 7) 
+            //                return n;                            
+            //            break;
+            //        case 2:
+            //            if (rnd.Next(1, 10) <= 3)
+            //                return n;
+            //            break;                                         
+            //    }              
+            //}
          return alle_Strecken.FirstOrDefault(q => q.getNumber() == 1);
         }
 

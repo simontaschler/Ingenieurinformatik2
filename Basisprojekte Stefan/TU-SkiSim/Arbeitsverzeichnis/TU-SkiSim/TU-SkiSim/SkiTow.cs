@@ -18,5 +18,9 @@ namespace TU_SkiSim
         {
             return numberOfLanes * velocity * (elements / length);
         }
+        public override string ToString()
+        {
+            return $"Lift {number}";
+        }
     }
 }

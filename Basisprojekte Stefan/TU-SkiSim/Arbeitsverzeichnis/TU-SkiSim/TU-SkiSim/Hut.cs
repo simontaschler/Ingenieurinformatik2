@@ -38,5 +38,9 @@ namespace TU_SkiSim
         {
             return maxGuests;
         }
+        public string getName()
+        {
+            return name;
+        }
     }
 }

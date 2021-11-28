@@ -7,26 +7,33 @@ namespace TU_SkiSim
 {
     public abstract class Skier
     {
-        private int arrivingTime;
-        private int leavingTime;
-        private int number;
-        protected int skillLevel;
-        private Status status ;
-        private int timeToNextStep;
-        private List<Lift> usedLifts;
-        private List<Track> usedTracks;
-        protected int velocity;
-        protected List<Hut> visitedHuts;
+        private int arrivingTime;       //
+        private int leavingTime;        //
+        private int number;             //
+        protected int skillLevel;       //
+        private Status status ;         //   
+        private int timeToNextStep;     //
+        private List<Lift> usedLifts;   //
+        private List<Track> usedTracks; //
+        protected int velocity;         //
+        protected List<Hut> visitedHuts;    
         private int waitingNumber;
 
         protected Skier(int number, int arrivingTime)
         {
-            throw new System.NotImplementedException();
+            this.number = number;
+            this.arrivingTime = arrivingTime;
+            usedLifts = new List<Lift>();
+            usedTracks = new List<Track>();
+            visitedHuts = new List<Hut>();
+            this.status = Status.vorLift;
+            this.timeToNextStep = 0;
+            this.waitingNumber = 0;
         }
 
         public virtual int calculateNeededTime(Track akt_Strecke)
         {
-            return akt_Strecke.getLength() / velocity;
+            return (int)Math.Ceiling((double)akt_Strecke.getLength() / velocity);
         }
 
         public abstract Track calculateNextTrack(List<Track> alle_Strecken);
