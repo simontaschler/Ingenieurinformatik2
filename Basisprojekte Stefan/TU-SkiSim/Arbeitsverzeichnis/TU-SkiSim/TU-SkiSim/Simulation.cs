@@ -152,17 +152,17 @@ namespace TU_SkiSim
                 skifahrer.setStatus(Status.inTrack);
                 skifahrer.setTimeToNextStep(skifahrer.calculateNeededTime(nextTrack));
                 logger?.AppendTask($"4.2 nächste Strecke Track: {nextTrack.getNumber()}");
-                
-                //if (nextTrack.getHut() != null)
-                //{
-                //    Random rnd = new Random();
-                //    if (skifahrer.getProbabilityHut() > rnd.NextDouble() && nextTrack.getHut().getGuests() < nextTrack.getHut().getMaxGuests())
-                //    {
-                //        skifahrer.setTimeToNextStep(nextTrack.getHut().getAverageStay());
-                //        skifahrer.setVisitedHut(nextTrack.getHut());
-                //        nextTrack.getHut().addGuests(1);
-                //    }
-                //}
+
+                if (nextTrack.getHut() != null)
+                {
+                    Random rnd = new Random();
+                    if (skifahrer.getProbabilityHut() > rnd.NextDouble() && nextTrack.getHut().getGuests() < nextTrack.getHut().getMaxGuests())
+                    {
+                        skifahrer.setTimeToNextStep(nextTrack.getHut().getAverageStay());
+                        skifahrer.setVisitedHut(nextTrack.getHut());
+                        nextTrack.getHut().addGuests(1);
+                    }
+                }
             }
             else
             {               

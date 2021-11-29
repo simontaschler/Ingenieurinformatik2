@@ -11,7 +11,7 @@ namespace TU_SkiSim
     {
         static void Main(string[] args)
         {
-            List<Lift> allLifts = new List<Lift> {new Chairlift(1,100,1500,0,40,2),     //Lift 1
+            List<Lift> allLifts = new List<Lift> {new Chairlift(1,100,1500,0,40,4),     //Lift 1
             new Chairlift(2,90,1200,0,30,2),                                            //Lift 2
             new SkiTow(3,50,600,0,30,2)};                                               //Lift 3
 
@@ -44,13 +44,13 @@ namespace TU_SkiSim
             
             
 
-            logger.WriteToFile(@"C:\Users\Steve\Documents\uni\3. Semester\Ing. Inf. II\Basisprojekte Stefan\Neuer Ordner\Logger.txt");
+            //logger.WriteToFile(@"C:\Users\Steve\Documents\uni\3. Semester\Ing. Inf. II\Basisprojekte Stefan\Neuer Ordner\Logger.txt");
             Console.ReadLine();
         }
         static List<Skier> GetTicketList()
         {
             List<Skier> skierList= new List<Skier>();
-            string[] Zeilen = File.ReadAllLines(@"C:\Users\Steve\Documents\uni\3. Semester\Ing. Inf. II\Arbeitsverzeichnis\U1\U1\Basisprojekte Stefan\TU-SkiSim\Angabe\Test.csv");
+            string[] Zeilen = File.ReadAllLines(@"C:\Users\Steve\Documents\uni\3. Semester\Ing. Inf. II\Arbeitsverzeichnis\U1\U1\Basisprojekte Stefan\TU-SkiSim\Angabe\Ticketverkaeufe.CSV");
             foreach (string n in Zeilen)
             {
                 string[] skiffahrerArray = n.Split(';');
