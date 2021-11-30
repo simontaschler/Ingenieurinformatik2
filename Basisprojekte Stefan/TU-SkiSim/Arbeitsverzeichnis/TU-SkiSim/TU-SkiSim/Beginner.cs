@@ -23,13 +23,13 @@ namespace TU_SkiSim
             Track[] potStrecken = alle_Strecken.Where(q => q.getLevel() <= skillLevel).ToArray();
             Random rnd = new Random();
 
-            foreach (Track n in potStrecken)
-            {
-                if (rnd.Next(0, 1) == 1)
-                {
-                    return n;
-                }
-            }
+            //foreach (Track n in potStrecken)
+            //{
+            //    if (rnd.Next(0, 1) == 1)
+            //    {
+            //        return n;
+            //    }
+            //}
 
             return potStrecken.FirstOrDefault(q => q.getNumber() == 1);
         }

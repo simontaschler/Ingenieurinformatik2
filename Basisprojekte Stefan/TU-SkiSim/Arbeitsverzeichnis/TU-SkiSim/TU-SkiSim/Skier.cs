@@ -134,7 +134,7 @@ namespace TU_SkiSim
 
         public override string ToString()
         {
-            return $"Nummer: {number}, SkillLevel: {skillLevel}, Time of arrival: {arrivingTime}, Leaving time: {leavingTime}";
+            return $"Nummer: {number}, SkillLevel: {skillLevel}, Time of arrival: {arrivingTime/60}, Leaving time: {leavingTime/60}";
         }
     }
     public enum Status:int

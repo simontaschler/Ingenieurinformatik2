@@ -40,15 +40,18 @@ namespace TU_SkiSim
         public void simulate(int startzeit, int endzeit)
         {
             endzeit *= 60;
+            startzeit *= 60;
             status = false;
-            int Zeit = startzeit * 60;
+            int Zeit = startzeit;
             while (Zeit <= endzeit)
             {
-               
+               if (Zeit >= endzeit-90)
+                { }
                 int anzahlSkifahrer = addedSkier.Count();
                 foreach (Skier n in addedSkier)
                 {
-                    
+                    if (n.getStatus() == Status.inLift && n.getTimeToNextStep() == 0)
+                    { }
                     if (n.getStatus() != Status.leftResort && n.getTimeToNextStep() == 0 && Zeit >= n.getArrivingTime())
                     {
                         switch (n.getStatus())
@@ -153,16 +156,16 @@ namespace TU_SkiSim
                 skifahrer.setTimeToNextStep(skifahrer.calculateNeededTime(nextTrack));
                 logger?.AppendTask($"4.2 nächste Strecke Track: {nextTrack.getNumber()}");
 
-                if (nextTrack.getHut() != null)
-                {
-                    Random rnd = new Random();
-                    if (skifahrer.getProbabilityHut() > rnd.NextDouble() && nextTrack.getHut().getGuests() < nextTrack.getHut().getMaxGuests())
-                    {
-                        skifahrer.setTimeToNextStep(nextTrack.getHut().getAverageStay());
-                        skifahrer.setVisitedHut(nextTrack.getHut());
-                        nextTrack.getHut().addGuests(1);
-                    }
-                }
+                //if (nextTrack.getHut() != null)
+                //{
+                //    Random rnd = new Random();
+                //    if (skifahrer.getProbabilityHut() > rnd.NextDouble() && nextTrack.getHut().getGuests() < nextTrack.getHut().getMaxGuests())
+                //    {
+                //        skifahrer.setTimeToNextStep(nextTrack.getHut().getAverageStay());
+                //        skifahrer.setVisitedHut(nextTrack.getHut());
+                //        nextTrack.getHut().addGuests(1);
+                //    }
+                //}
             }
             else
             {               
@@ -185,9 +188,14 @@ namespace TU_SkiSim
         private void sonnstigerStatus(Skier skifahrer)
         {
             Track lastTrack = skifahrer.getUsedTracks().Last();
-            Lift nextlift = lastTrack.getLift();                     
-            nextlift.addQueue();
-            skifahrer.setWaitingNumber(nextlift.getWaitingQueue());
+            Lift nextlift = lastTrack.getLift();          
+            if(skifahrer.getWaitingNumber() == 0)
+            {
+                nextlift.addQueue();
+                skifahrer.setWaitingNumber(nextlift.getWaitingQueue());
+            }
+                       
+            
             
             logger?.AppendTask($"4.4 nächsten Lift wählen Track: {lastTrack.getNumber()} Wartenr: {skifahrer.getWaitingNumber()}");
 

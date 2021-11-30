@@ -27,15 +27,15 @@ namespace TU_SkiSim
 
             List<Skier> allSkiers = new List<Skier>();
             allSkiers = GetTicketList();
-            
-            
+
+            Console.BufferHeight = Int16.MaxValue - 20000;
             var logger = new Logger();
             Simulation Test = new Simulation(allLifts, allSkiers,alleHuetten,allTracks, logger);
             Test.simulate(8,17);
 
             foreach (Skier s in allSkiers)
             {
-                Console.WriteLine($@"{s}    gefahrene Kilometer: {s.getUsedTracks().Sum(q => q.getLength())}");                
+                Console.WriteLine($@"{s}    gefahrene Kilometer: {s.getUsedTracks().Sum(q => q.getLength())/1000}");                
             }
 
             

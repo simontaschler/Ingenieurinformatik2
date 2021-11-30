@@ -24,24 +24,24 @@ namespace TU_SkiSim
         {
             Track[] potStrecken = alle_Strecken.Where(q => q.getLevel() <= skillLevel).ToArray();
             Random rnd = new Random();
-            foreach (Track n in potStrecken)
-            {
-                switch (n.getLevel())
-                {
-                    case 1:
-                        if (rnd.Next(1, 10) <= 2)
-                            return n;
-                        break;
-                    case 2:
-                        if (rnd.Next(1, 10) <= 3)
-                            return n;
-                        break;
-                    case 3:
-                        if (rnd.Next(1, 10) <= 5)
-                            return n;
-                        break;
-                }
-            }
+            //foreach (Track n in potStrecken)
+            //{
+            //    switch (n.getLevel())
+            //    {
+            //        case 1:
+            //            if (rnd.Next(1, 10) <= 2)
+            //                return n;
+            //            break;
+            //        case 2:
+            //            if (rnd.Next(1, 10) <= 3)
+            //                return n;
+            //            break;
+            //        case 3:
+            //            if (rnd.Next(1, 10) <= 5)
+            //                return n;
+            //            break;
+            //    }
+            //}
             return alle_Strecken.FirstOrDefault(q => q.getNumber() == 1);
         }
 
